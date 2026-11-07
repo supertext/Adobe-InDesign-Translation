@@ -144,3 +144,7 @@ Text is written in correctly, but proper display needs the World-Ready composer 
 
 **What if the translator returns XLIFF 2.0?**
 Only XLIFF 1.2 is supported. Most tools can export 1.2 if you set the format when you create the project.
+
+## Support
+
+Questions, problems or ideas: use the [Supertext support form](https://integrations.supertext.com/en/support?platform=adobe-indesign). Mention the version of Adobe InDesign and of the plugin, what you did and what you expected; an error message helps a lot. You get an answer by email, in your language.
