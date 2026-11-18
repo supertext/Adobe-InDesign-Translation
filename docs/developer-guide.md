@@ -170,12 +170,12 @@ diff <(sed -n '/shared (identical in both scripts)/,$p' "scripts/Translation Exp
 
   ```bash
   # macOS
-  ln -s "$PWD/scripts" ~/Library/Preferences/Adobe\ InDesign/Version\ 21.0/en_US/Scripts/Scripts\ Panel/dev
+  ln -s "$PWD/scripts" ~/Library/Preferences/Adobe\ InDesign/Version\ 22.0/en_US/Scripts/Scripts\ Panel/dev
   ```
 
   ```powershell
   # Windows (as administrator, or with developer mode on)
-  New-Item -ItemType SymbolicLink -Path "$env:APPDATA\Adobe\InDesign\Version 21.0\en_US\Scripts\Scripts Panel\dev" -Target "$PWD\scripts"
+  New-Item -ItemType SymbolicLink -Path "$env:APPDATA\Adobe\InDesign\Version 22.0\en_US\Scripts\Scripts Panel\dev" -Target "$PWD\scripts"
   ```
 
 - **Syntax check without InDesign:**

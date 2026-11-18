@@ -8,6 +8,10 @@ All notable changes to this project are documented here. The format follows [Kee
 
 - Support: the Supertext support form is linked in the README, the user guide and GitHub's "New issue" page.
 
+### Changed
+
+- Installation and developer guides: example paths use InDesign 2027 (`Version 22.0`), the current release.
+
 ## [1.0.0] - 2026-10-05
 
 ### Added
