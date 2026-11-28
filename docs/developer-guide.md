@@ -217,6 +217,7 @@ Round trip:
 
 ## Code quality and security checks
 
+- **Scorecard** workflow (`.github/workflows/scorecard.yml`; weekly, on every push to `main` and when branch protection changes): [OpenSSF Scorecard](https://scorecard.dev) scores the repo's security practices (pinned actions, token permissions, branch protection, dependency updates, static analysis); findings appear under *Security → Code scanning*, results are published to the public Scorecard API.
 - **Checks** workflow (`.github/workflows/checks.yml`): [actionlint](https://github.com/rhysd/actionlint) and [zizmor](https://docs.zizmor.sh/) lint the workflows on every push and pull request. Dependency review fails a pull request that adds a package with a known vulnerability (moderate or worse). Actions are pinned to commit SHAs; Dependabot keeps the pins up to date. To run the workflow lint locally: `pip install actionlint-py zizmor`, then `actionlint` and `zizmor .github/workflows` in the repo root.
 - **Links** workflow (`.github/workflows/links.yml`): [lychee](https://lychee.cli.rs/) checks the links in all Markdown files weekly and whenever docs change on `main`. Broken links open (or update) the issue "Broken links in the docs". Links that can't work from CI (local URLs, placeholders, pages behind a login) are excluded in `.lycheeignore`.
 - There is no build or CI test run yet: run the syntax check and the logic test above before committing. CodeQL's JavaScript analysis (see below) covers the scripts where it can parse them; ExtendScript-only syntax such as `#target` may make it skip a file.
