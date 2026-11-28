@@ -4,6 +4,10 @@ All notable changes to this project are documented here. The format follows [Kee
 
 ## [Unreleased]
 
+### Security
+
+- Import with translated copies: the language taken from the imported file goes into the copy's file name only as letters, digits, `-` and `_`, so a crafted file can't make the script write the copy into another folder.
+
 ### Added
 
 - Support: the Supertext support form is linked in the README, the user guide and GitHub's "New issue" page.

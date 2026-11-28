@@ -59,7 +59,8 @@
             var ext = (doc.name.match(/\.[^\.]+$/) || [".indd"])[0];
             var overwrite = null;
             for (var p = 0; p < packs.length; p++) {
-                var lang = packs[p].lang || "translated" + (p + 1);
+                // The language comes from the imported file: only letters, digits, "-" and "_" go into the copy's name.
+                var lang = String(packs[p].lang || "translated" + (p + 1)).replace(/[^A-Za-z0-9_-]/g, "_");
                 var dest = new File(orig.parent.fsName + "/" + base + "_" + lang + ext);
                 if (isOpen(dest)) { out.push(lang + ": skipped, close " + dest.displayName + " first."); continue; }
                 if (dest.exists) {
